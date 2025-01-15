@@ -28,7 +28,7 @@ crime_color_mapping = {
 }
 
 try:
-    crime_data = pd.read_csv("/Users/terrelldavis/Desktop/Personal Projects/SafeRadiusDC/dc-crimes-search-results.csv")
+    crime_data = pd.read_csv("dc-crimes-search-results.csv")
     print("CSV file loaded successfully.")
 except Exception as e:
     print(f"Error loading CSV file: {e}")
