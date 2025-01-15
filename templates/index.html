@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>SafeRadiusDC</title>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation Bar -->
+        <div class="container-h" id="nav">
+            <h1 id="title">SafeRadiusDC</h1>
+            <a style="margin-right:10px; margin-left: auto;" href="/about">About</a>
+            <a href="/api">API</a>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content-container" style="align-items: center;">
+            <!-- X Section -->
+            <div class="x-section">
+                <div class="container-h">
+                    <p class="section-text">Miles from: &nbsp;</p>
+                    <p class="numblock" id="miles">1</p>
+                    <div class="container-v">
+                        <button class="updownbutton" id="miles_up" type="button">&and;</button>
+                        <button class="updownbutton" id="miles_down" type="button">&or;</button>
+                    </div>
+                </div>
+
+                <div class="container-h">
+                    <p class="section-text">Time of Day:</p>
+                    <p class="numblock" id="time_of_day">Any</p>
+                    <div class="container-v">
+                        <button class="updownbutton" id="time_of_day_up" type="button">&and;</button>
+                        <button class="updownbutton" id="time_of_day_down" type="button">&or;</button>
+                    </div>
+                </div>
+
+            <form id="addressForm" onsubmit="addressbarLocation(event)">
+
+                <div class="container-h">
+                    <label for="addressbar">Enter Address: </label>
+                    <input type="text" id="addressbar" name="addressbar" value="">
+                    <button type="submit" class="submitbutton">Submit</button>
+                      </div>
+                
+                <div class="container-h">
+                    <button type="button" class="submitbutton" onclick="getLocation(event)">Get Location</button>
+                    <input type="hidden" id="location-input" name="location" value="None" />
+              
+                </div>
+            </form>
+
+            </div>
+
+            <div class="y-section">
+                <div class="map-wrapper">
+                    <iframe id="map" src="/map"></iframe>
+                </div>
+            </div>
+            
+
+            <!-- Z Section -->
+            <div class="z-section">
+                <p class="section-text" >Report</p>
+                <p id="Report">Welcome to SafeRadiusDC, your go-to platform for accessing detailed and location-specific crime data. Simply input your location, and our system will provide you with an interactive map showing recent crimes within a specified radius. Stay informed and stay safe with real-time data and insights tailored to your area.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            2024 SafeRadiusDC
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/geolocation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+</body>
+</html>

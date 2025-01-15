@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRadiusDC</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: red;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 1.5rem;
+        }
+        h1, h2 {
+            color: red;
+        }
+        code {
+            background: #eee;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+        pre {
+            background: #eee;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">SafeRadiusDC</h1>
+    </header>
+    <main>
+        <h2>1. Introduction</h2>
+        <p>
+            This API is designed to provide easy access to the data used for the map without requiring a download, which you can do 
+            <a href="your-download-link-here">here</a>. Additionally, it offers filtered crime data.
+        </p>
+        <h2>2. Base URL</h2>
+        <p>All API requests start with this base URL:</p>
+        <code>http://127.0.0.1:5000/api</code>
+
+        <h2>3. Available Endpoints</h2>
+        <p>Here are the main endpoints you can use:</p>
+        <ul>
+            <li><strong>GET /crimes</strong>: Retrieve crime data.</li>
+        </ul>
+
+        <h2>4. Example Request</h2>
+        <p>Here’s how to use the API:</p>
+
+        <h3>Using cURL</h3>
+        <pre>
+            curl -X GET -G "http://127.0.0.1:5000/crimes" \
+            -d "OFFENSE=x" \
+            -d "offensegroup=y" \
+            -d "SHIFT=z"
+        </pre>
+
+        <h3>Using JavaScript (Fetch API)</h3>
+        <pre>
+fetch('https://api.example.com/v1/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+        </pre>
+
+        <h2>5. Example Response</h2>
+        <pre>
+{
+    "status": "success",
+    "data": {
+        "message": "Hello, World!"
+    }
+}
+        </pre>
+
+        <h2>6. Error Handling</h2>
+        <p>If something goes wrong, the API will return an error response:</p>
+        <pre>
+{
+    "status": "error",
+    "message": "Endpoint not found"
+}
+        </pre>
+    </main>
+    <footer>
+        <a href="/"> Home</a>
+    </footer>
+</body>
+</html>
