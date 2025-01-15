@@ -1,0 +1,11 @@
+bleach
+gunicorn
+pandas
+folium
+haversine
+geocoder
+requests
+leafmap
+openai
+python-dotenv
+flask
