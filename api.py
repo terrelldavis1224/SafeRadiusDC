@@ -1,6 +1,6 @@
 import pandas as pd
 
-crime_data = pd.read_csv("/Users/terrelldavis/Desktop/Personal Projects/SafeRadiusDC/dc-crimes-search-results.csv")
+crime_data = pd.read_csv("dc-crimes-search-results.csv")
 
 shifts = ['midnight', 'day', 'evening']
 offenses = ['theft/other', 'robbery', 'motor vehicle theft', 'theft f/auto',
