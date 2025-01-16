@@ -126,9 +126,9 @@ def update_circle(curx, cury ,miles,report):
 
     df_describe = pd.concat([numerical_desc, categorical_desc], axis=1)
     df_describe.columns = ['_'.join(col).strip() for col in df_describe.columns.values]
-    df_describe.to_csv("/Users/terrelldavis/Desktop/Personal Projects/SafeRadiusDC/infotest.csv")
+    #df_describe.to_csv("/Users/terrelldavis/Desktop/Personal Projects/SafeRadiusDC/infotest.csv")
     input_string = StringIO()
-    df_describe.to_csv(input_string, index=False)
+    # df_describe.to_csv(input_string, index=False)
     csv_output = input_string.getvalue()
 
     if report :
