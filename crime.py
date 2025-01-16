@@ -132,7 +132,7 @@ def update_circle(curx, cury ,miles,report):
     csv_output = input_string.getvalue()
 
     if report :
-        reportInfo = gptRequest(csv_output)
+        reportInfo = "" #gptRequest(csv_output)
     else:
         reportInfo =""
 
