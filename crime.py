@@ -132,7 +132,7 @@ def update_circle(curx, cury ,miles,report):
     csv_output = input_string.getvalue()
 
     if report :
-        reportInfo = "" #gptRequest(csv_output)
+        reportInfo = gptRequest(csv_output)
     else:
         reportInfo =""
 
@@ -145,7 +145,7 @@ def update_circle(curx, cury ,miles,report):
 def gptRequest(text):
     # Create the response using OpenAI's API
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o-mini",
         messages=[
             {
                 "role": "system",
