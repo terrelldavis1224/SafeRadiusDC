@@ -137,7 +137,6 @@ def update_circle(curx, cury ,miles,report):
         reportInfo =""
 
     # Save the updated map
-    my_map.save("/Users/terrelldavis/Desktop/Personal Projects/SafeRadiusDC/templates/map1.html")
 
     return (my_map._repr_html_(),reportInfo)
 #create_report(csv_output)
